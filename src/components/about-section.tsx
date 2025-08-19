@@ -13,7 +13,7 @@ export function AboutSection() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="space-y-8">
-          <Card className="bg-background/50 backdrop-blur-sm">
+          <Card className="bg-background/50 backdrop-blur-sm glow-on-hover transition-all duration-300 hover:-translate-y-1">
             <CardHeader>
               <CardTitle className="font-headline text-2xl flex items-center gap-3">
                 <span className="text-4xl">👩‍💼</span>
@@ -25,7 +25,7 @@ export function AboutSection() {
             </CardContent>
           </Card>
 
-          <Card className="bg-background/50 backdrop-blur-sm">
+          <Card className="bg-background/50 backdrop-blur-sm glow-on-hover transition-all duration-300 hover:-translate-y-1">
             <CardHeader>
               <CardTitle className="font-headline text-2xl flex items-center gap-3">
                 <Briefcase />
@@ -50,7 +50,7 @@ export function AboutSection() {
         </div>
 
         <div className="space-y-8">
-          <Card className="bg-background/50 backdrop-blur-sm">
+          <Card className="bg-background/50 backdrop-blur-sm glow-on-hover transition-all duration-300 hover:-translate-y-1">
             <CardHeader>
               <CardTitle className="font-headline text-2xl flex items-center gap-3">
                 <GraduationCap />
@@ -72,7 +72,7 @@ export function AboutSection() {
             </CardContent>
           </Card>
           
-          <Card className="bg-background/50 backdrop-blur-sm">
+          <Card className="bg-background/50 backdrop-blur-sm glow-on-hover transition-all duration-300 hover:-translate-y-1">
             <CardHeader>
               <CardTitle className="font-headline text-2xl flex items-center gap-3">
                 <Lightbulb />
