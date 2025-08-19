@@ -2,7 +2,7 @@ import { Code, GitMerge, Github, Figma, Bot, Database, Flame, BrainCircuit, Unpl
 import React from 'react';
 
 export const about = {
-  paragraph: "I'm a passionate and detail-oriented developer with a strong foundation in computer science and a specialization in AI and machine learning. I thrive on solving complex problems and creating intuitive, high-performance web applications. My goal is to leverage my skills in both frontend development and data science to build innovative solutions that make a real-world impact.",
+  paragraph: "I am a software developer with a strong foundation in web development, programming, and problem-solving. My expertise includes working with JavaScript, React.js, Python, Java, and databases, along with knowledge of cloud computing, RESTful APIs, and version control using Git/GitHub. I focus on building responsive, efficient, and scalable applications while continuously improving my technical skills to stay aligned with modern industry practices.",
 };
 
 export const experience = [
