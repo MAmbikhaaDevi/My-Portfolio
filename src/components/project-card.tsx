@@ -12,7 +12,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ title, emoji, githubUrl, liveUrl }: ProjectCardProps) {
   return (
-    <Card className="flex flex-col bg-primary/10 hover:bg-primary/20 backdrop-blur-sm overflow-hidden transform transition-all duration-300 hover:-translate-y-2 glow-on-hover">
+    <Card className="flex flex-col bg-primary/10 hover:bg-primary/20 backdrop-blur-sm overflow-hidden transform transition-all duration-300 hover:-translate-y-2 glow-on-hover shake-on-hover">
       <CardHeader>
         <div className="text-6xl mb-4" role="img" aria-label="project thumbnail emoji">{emoji}</div>
         <CardTitle className="font-headline text-xl h-14">{title}</CardTitle>

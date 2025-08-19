@@ -23,10 +23,10 @@ export function HomeSection() {
           AI/ML & Creative Web Developer
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
-          <Button size="lg" asChild className="glow-on-hover">
+          <Button size="lg" asChild className="glow-on-hover shake-on-hover">
             <Link href="#projects">View Projects</Link>
           </Button>
-          <Button size="lg" variant="outline" asChild className="glow-on-hover border-primary hover:bg-primary/10">
+          <Button size="lg" variant="outline" asChild className="glow-on-hover shake-on-hover border-primary hover:bg-primary/10">
             <Link href="#contact">Contact Me</Link>
           </Button>
         </div>

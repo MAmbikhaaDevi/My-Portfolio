@@ -65,4 +65,7 @@
   .glow-on-hover:hover {
     @apply shadow-[0_0_15px] shadow-primary/80;
   }
+  .shake-on-hover:hover {
+    animation: shake 0.5s ease-in-out;
+  }
 }
