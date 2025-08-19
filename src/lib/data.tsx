@@ -1,4 +1,4 @@
-import { Code, GitMerge, Github, Figma, Bot, Database, Flame, BrainCircuit } from 'lucide-react';
+import { Code, GitMerge, Github, Figma, Bot, Database, Flame, BrainCircuit, Unplug } from 'lucide-react';
 import React from 'react';
 
 export const about = {
@@ -56,7 +56,7 @@ export const skills = [
   { name: 'Figma', icon: <Figma /> },
   { name: 'UI/UX', icon: <Figma /> },
   { name: 'Bootstrap', icon: <Code /> },
-  { name: 'AWS', icon: <Code /> },
+  { name: 'AWS', icon: <Unplug /> },
 ];
 
 export const projects = [
