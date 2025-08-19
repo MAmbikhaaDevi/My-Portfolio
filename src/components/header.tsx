@@ -35,8 +35,8 @@ export function Header() {
         </Link>
         <div className="hidden md:flex items-center gap-2">
           {navItems.map((item) => (
-            <Button key={item} variant="ghost" asChild>
-              <Link href={`#${item.toLowerCase()}`} className="text-base font-medium hover:text-primary transition-colors">
+            <Button key={item} variant="ghost" asChild className="glow-on-hover">
+              <Link href={`#${item.toLowerCase()}`} className="text-base font-medium">
                 {item}
               </Link>
             </Button>
