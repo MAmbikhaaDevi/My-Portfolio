@@ -15,12 +15,12 @@ export function HomeSection() {
               className="inline-block animate-fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              {char === " " ? "\u00A0" : char}
+              {char === " " ? " " : char}
             </span>
           ))}
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-          AI Enthusiast & Creative Web Developer
+          AI/ML & Creative Web Developer
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
           <Button size="lg" asChild className="glow-on-hover">
