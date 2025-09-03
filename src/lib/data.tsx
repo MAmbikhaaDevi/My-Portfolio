@@ -2,7 +2,7 @@ import { Code, GitMerge, Github, Figma, Bot, Database, Flame, BrainCircuit, Unpl
 import React from 'react';
 
 export const about = {
-  paragraph: "As a passionate software developer with a Master's in Computer Science, I specialize in both creative web development and intelligent AI/ML solutions. My experience includes building responsive user interfaces with React.js and developing predictive models with Python and TensorFlow. I thrive on solving complex problems and am dedicated to creating efficient, scalable applications that push the boundaries of technology.",
+  paragraph: "As a passionate software developer with a Master's in Computer Science, I specialize in both creative web development and intelligent AI/ML solutions. My experience includes building responsive user interfaces and developing predictive models with Python and TensorFlow. I thrive on solving complex problems and am dedicated to creating efficient, scalable applications that push the boundaries of technology.",
 };
 
 export const experience = [
