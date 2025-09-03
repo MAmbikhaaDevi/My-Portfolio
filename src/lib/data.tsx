@@ -1,4 +1,4 @@
-import { Code, GitMerge, Github, Figma, Bot, Database, Flame, BrainCircuit, Unplug } from 'lucide-react';
+import { Code, GitMerge, Github, Figma, Bot, Database, Flame, BrainCircuit, Unplug, Brain, CodeXml, GitBranch, TerminalSquare, DatabaseZap, Cloud } from 'lucide-react';
 import React from 'react';
 
 export const about = {
@@ -34,28 +34,27 @@ export const education = [
 ];
 
 export const skills = [
-  { name: 'HTML', icon: <Code /> },
-  { name: 'CSS', icon: <Code /> },
-  { name: 'JavaScript', icon: <Code /> },
-  { name: 'React.js', icon: <Code /> },
+  { name: 'HTML', icon: <CodeXml /> },
+  { name: 'CSS', icon: <CodeXml /> },
+  { name: 'JavaScript', icon: <CodeXml /> },
   { name: 'Python', icon: <Code /> },
   { name: 'SQL', icon: <Database /> },
-  { name: 'MongoDB', icon: <Database /> },
+  { name: 'MongoDB', icon: <DatabaseZap /> },
   { name: 'MySQL', icon: <Database /> },
   { name: 'Firebase', icon: <Flame /> },
   { name: 'Pandas', icon: <Code /> },
   { name: 'NumPy', icon: <Code /> },
   { name: 'Matplotlib', icon: <Code /> },
   { name: 'TensorFlow', icon: <BrainCircuit /> },
-  { name: 'Keras', icon: <BrainCircuit /> },
-  { name: 'Git', icon: <GitMerge /> },
+  { name: 'Keras', icon: <Brain /> },
+  { name: 'Git', icon: <GitBranch /> },
   { name: 'GitHub', icon: <Github /> },
-  { name: 'VS Code', icon: <Code /> },
+  { name: 'VS Code', icon: <TerminalSquare /> },
   { name: 'Jupyter', icon: <Code /> },
-  { name: 'Netlify', icon: <Code /> },
+  { name: 'Netlify', icon: <Cloud /> },
   { name: 'Figma', icon: <Figma /> },
   { name: 'UI/UX', icon: <Figma /> },
-  { name: 'Bootstrap', icon: <Code /> },
+  { name: 'Bootstrap', icon: <CodeXml /> },
   { name: 'AWS', icon: <Unplug /> },
 ];
 

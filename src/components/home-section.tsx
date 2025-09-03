@@ -1,9 +1,28 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { ArrowDown } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export function HomeSection() {
   const name = "Ambikhaa Devi";
+  const roles = ['Creative Web Developer', 'Software Developer', 'AI/ML'];
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFading(true);
+      setTimeout(() => {
+        setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+        setIsFading(false);
+      }, 500); // fade-out duration
+    }, 3000); // Time each role is displayed
+
+    return () => clearInterval(interval);
+  }, [roles.length]);
 
   return (
     <section id="home" className="flex min-h-screen flex-col items-center justify-center text-center relative">
@@ -19,8 +38,8 @@ export function HomeSection() {
             </span>
           ))}
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-          AI/ML & Creative Web Developer
+        <p className={cn("text-lg md:text-xl text-muted-foreground transition-opacity duration-500", isFading ? 'opacity-0' : 'opacity-100')}>
+          {roles[currentRoleIndex]}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
           <Button size="lg" asChild className="glow-on-hover shake-on-hover">
