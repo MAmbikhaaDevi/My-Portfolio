@@ -67,16 +67,16 @@ export const projects = [
     githubUrl: "https://github.com/MAmbikhaaDevi/Real-Time-Parkinson-Disease-Detector",
   },
   {
-    title: "Customer Churn Prediction using ANN",
-    category: "AI/ML",
-    emoji: "💡",
-    githubUrl: "https://github.com/MAmbikhaaDevi/Customer-Churn-Prediction-using-ANN",
-  },
-  {
     title: "Fashion MNIST Image Classification",
     category: "AI/ML",
     emoji: "👕",
     githubUrl: "https://github.com/MAmbikhaaDevi/Convolutional-Neural-Network-CNN-for-Fashion-MNIST-Image-Classification",
+  },
+  {
+    title: "Customer Churn Prediction using ANN",
+    category: "AI/ML",
+    emoji: "💡",
+    githubUrl: "https://github.com/MAmbikhaaDevi/Customer-Churn-Prediction-using-ANN",
   },
   // Data Science
   {
