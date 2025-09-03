@@ -72,6 +72,12 @@ export const projects = [
     emoji: "💡",
     githubUrl: "https://github.com/MAmbikhaaDevi/Customer-Churn-Prediction-using-ANN",
   },
+  {
+    title: "Fashion MNIST Image Classification",
+    category: "AI/ML",
+    emoji: "👕",
+    githubUrl: "https://github.com/MAmbikhaaDevi/Convolutional-Neural-Network-CNN-for-Fashion-MNIST-Image-Classification",
+  },
   // Data Science
   {
     title: "Diamonds Price Prediction",
