@@ -82,7 +82,7 @@ export function AboutSection() {
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill, index) => (
-                  <SkillBadge key={index} name={skill.name} icon={skill.icon} />
+                  <SkillBadge key={index} name={skill.name} icon={skill.icon} color={skill.color} />
                 ))}
               </div>
             </CardContent>
