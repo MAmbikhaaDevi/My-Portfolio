@@ -12,6 +12,8 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Github, Linkedin, Mail, Send } from 'lucide-react';
 import Link from 'next/link';
 import { contact } from '@/lib/data';
+import { sendContactMessage } from '@/ai/flows/contact-flow';
+import { useState } from 'react';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters.'),
@@ -21,18 +23,34 @@ const formSchema = z.object({
 
 export function ContactSection() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: { name: '', email: '', message: '' },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: 'Message Sent!',
-      description: 'Thank you for reaching out. I will get back to you soon.',
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const result = await sendContactMessage(values);
+      if (result.success) {
+        toast({
+          title: 'Message Sent!',
+          description: 'Thank you for reaching out. I will get back to you soon.',
+        });
+        form.reset();
+      } else {
+        throw new Error('Failed to send message.');
+      }
+    } catch (error) {
+      toast({
+        title: 'Uh oh! Something went wrong.',
+        description: 'There was a problem with your request. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
   
   return (
@@ -55,7 +73,7 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Name" {...field} />
+                        <Input placeholder="Your Name" {...field} disabled={isSubmitting} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -68,7 +86,7 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input type="email" placeholder="your.email@example.com" {...field} />
+                        <Input type="email" placeholder="your.email@example.com" {...field} disabled={isSubmitting} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -81,14 +99,14 @@ export function ContactSection() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Your message..." {...field} />
+                        <Textarea placeholder="Your message..." {...field} disabled={isSubmitting}/>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full glow-on-hover">
-                  <Send className="mr-2 h-4 w-4" /> Send Message
+                <Button type="submit" className="w-full glow-on-hover" disabled={isSubmitting}>
+                  <Send className="mr-2 h-4 w-4" /> {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </Form>
